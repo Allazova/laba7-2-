@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7laba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1 {
+            font-style: italic;
+            color: #555;
+            text-align: center;
+        }
+        h2 {
+            font-style: italic;
+            color: #555;
+        }
+        p {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ВАРИАНТ 2</h1>
+    <h2>1 задание (Произведение чисел)</h2>
+    <p id="result1"></p> 
+    <script>
+        function multiply(a, b) {
+            return a * b;
+        }
+        let a = 5; 
+        let b = 7;
+        let result1 = multiply(a, b);
+        document.getElementById('result1').textContent = `Произведение: ${result1}`; 
+    </script>
+    <h2>2 задание (Удаление пробелов)</h2>
+    <p id="result2"></p>
+    <script>
+        function trimSpaces(str) {
+            return str.trim();
+        }
+        let stringWithSpaces = "  Здравствуй, Айша!  ";
+        let trimmedString = trimSpaces(stringWithSpaces);
+        document.getElementById('result2').textContent = `Строка без пробелов: "${trimmedString}"`;
+    </script>
+    <h2>3 задание (Сравнение значений)</h2>
+    <p id="result3"></p>
+    <script>
+        function isSame(a, b) {
+            return a === b;
+        }
+        let value1 = 5;
+        let value2 = "5";
+        let isSameResult = isSame(value1, value2);
+        document.getElementById('result3').textContent = `Значения одинаковы: ${isSameResult}`;
+    </script>
+    <h2>4 задание (Проверка наличия свойства)</h2>
+    <p id="result4"></p>
+    <script>
+        function hasKey(obj, key) {
+            return obj.hasOwnProperty(key);
+        }
+        let obj = { name: "Айша", age: 19 };
+        let keyToCheck = "age";
+        let hasKeyResult = hasKey(obj, keyToCheck);
+        document.getElementById('result4').textContent = `Свойство "${keyToCheck}" существует: ${hasKeyResult}`;
+    </script>
+    <h2>5 задание (Последний элемент массива)</h2>
+    <p id="result5"></p>
+    <script>
+        function getLastElement(array) {
+            return array[array.length - 1];
+        }
+        let array1 = [1, 2, 3, 4, 5];
+        let lastElement = getLastElement(array1);
+        document.getElementById('result5').textContent = `Последний элемент: ${lastElement}`;
+    </script>
+    <h2>6 задание (Вывод четных чисел)</h2>
+    <p id="result6"></p>
+    <script>
+        function logEven(array) {
+            const evenNumbers = array.filter(num => num % 2 === 0);
+            document.getElementById('result6').textContent = `Четные числа: ${evenNumbers.join(", ")}`;
+        }
+        let array2 = [1, 2, 3, 4, 5, 6];
+        logEven(array2);
+    </script>
+    <h2>7 задание (Удвоение элементов массива)</h2>
+    <p id="result7"></p>
+    <script>
+        function doubleElements(array) {
+            return array.map(num => num * 2);
+        }
+        let array3 = [1, 2, 3, 4, 5];
+        let doubledArray = doubleElements(array3);
+        document.getElementById('result7').textContent = `Удвоенные элементы: ${JSON.stringify(doubledArray)}`;
+    </script>
+</body>
+</html>
